@@ -20,5 +20,5 @@ jobs:
           java-package: jdk
           java-version: ${{ matrix.java }}
       - name: Compile the Project
-        working-directory: ./target
+        working-directory: ${GITHUB_WORKSPACE} 
         run: mvn -B compile
