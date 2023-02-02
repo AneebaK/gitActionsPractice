@@ -20,5 +20,5 @@ jobs:
           java-package: jdk
           java-version: ${{ matrix.java }}
       - name: Compile the Project
-        working-directory: gitActionsPractice
+        working-directory: ./target
         run: mvn -B compile
