@@ -19,4 +19,5 @@ jobs:
           java-package: jdk
           java-version: ${{ matrix.java }}
       - name: Compile the Project
+        working-directory: C:\Users\AneebaKhalid\Git_Repos
         run: mvn --batch-mode --update-snapshots package
