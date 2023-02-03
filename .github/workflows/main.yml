@@ -4,7 +4,7 @@ name: Build sample Java Maven project
 on: [push, pull_request]
 
 jobs:
-  compile:
+  build:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
@@ -20,5 +20,4 @@ jobs:
           java-package: jdk
           java-version: ${{ matrix.java }}
       - name: Compile the Project
-        working-directory: ./
-        run: mvn -B compile
+        run: mvn --batch-mode --update-snapshots package
